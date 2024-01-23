@@ -1,20 +1,16 @@
 import {DashboardWidgetContainer} from '@sanity/dashboard'
 
 export interface WidgetConfig {
-  title?: string
+  title: string
   url: string
-  height?: string
-}
-
-const defaultProps = {
-  title: 'Plausible Analytics',
+  height: string
 }
 
 export function Widget(props: WidgetConfig) {
-  const {title, url, height} = { ...defaultProps, ...props}
+  const {title, url, height} = props
 
   return (
-    <DashboardWidgetContainer header={title}>
+    <DashboardWidgetContainer header={`${title ? title : 'Plausible Analytics'}`}>
       <>
         <iframe
           src={`${url}&embed=true&theme=system`}
