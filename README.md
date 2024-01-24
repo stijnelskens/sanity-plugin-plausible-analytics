@@ -42,9 +42,9 @@ export default defineConfig({
 
 ### Options
 
-`url` - Required - the shared link from plausible
-`title` - Optional - defaults to 'Plausible Analytics'
-`height` - Optional - defaults to 'calc(100vh - 143px)'
+- `url` - Required - the shared link from plausible
+- `title` - Optional - defaults to 'Plausible Analytics'
+- `height` - Optional - defaults to 'calc(100vh - 143px)'
 
 ## License
 
