@@ -1,6 +1,14 @@
 # sanity-plugin-plausible-analytics
 
 > This is a **Sanity Studio v3** plugin.
+> Inspired by https://www.sanity.io/plugins/plausible-iframe for v2.
+
+![Example image](image.png)
+
+## Plausible configuration
+
+- Create a shared link without password protection.
+- Add the shared link to the plugin configuration.
 
 ## Installation
 
@@ -10,17 +18,33 @@ npm install sanity-plugin-plausible-analytics
 
 ## Usage
 
-Add it as a plugin in `sanity.config.ts` (or .js):
+Add it as a plugin inside the dashboardTool in `sanity.config.ts` (or .js):
 
 ```ts
 import {defineConfig} from 'sanity'
-import {myPlugin} from 'sanity-plugin-plausible-analytics'
+import {dashboardTool} from '@sanity/dashboard'
+import {plausibleWidget} from 'sanity-plugin-plausible-analytics'
 
 export default defineConfig({
   //...
-  plugins: [myPlugin({})],
+
+  plugins: [
+    dashboardTool({
+      widgets: [
+        plausibleWidget({
+          url: '<https://plausible.io/share/your-project?auth=xxxx>',
+        }),
+      ],
+    }),
+  ],
 })
 ```
+
+### Options
+
+`url` - Required - the shared link from plausible
+`title` - Optional - defaults to 'Plausible Analytics'
+`height` - Optional - defaults to 'calc(100vh - 143px)'
 
 ## License
 

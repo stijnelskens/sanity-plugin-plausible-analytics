@@ -11,6 +11,6 @@ export function plausibleWidget(config: PlausibleWidgetConfig): DashboardWidget 
     component: function component() {
       return <Widget {...config} />
     },
-    layout: config.layout,
+    layout: config.layout ?? {width: 'full'},
   }
 }

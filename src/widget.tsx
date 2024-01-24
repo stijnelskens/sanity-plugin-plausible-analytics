@@ -1,16 +1,21 @@
 import {DashboardWidgetContainer} from '@sanity/dashboard'
 
 export interface WidgetConfig {
-  title: string
+  title?: string
   url: string
-  height: string
+  height?: string
+}
+
+const defaultProps = {
+  title: 'Plausible Analytics',
+  height: 'calc(100vh - 143px)',
 }
 
 export function Widget(props: WidgetConfig) {
   const {title, url, height} = props
 
   return (
-    <DashboardWidgetContainer header={`${title ? title : 'Plausible Analytics'}`}>
+    <DashboardWidgetContainer header={title}>
       <>
         <iframe
           src={`${url}&embed=true&theme=system`}
@@ -18,7 +23,7 @@ export function Widget(props: WidgetConfig) {
           style={{
             width: '100%',
             minWidth: 'calc(100% - 1px)',
-            height: height ? height : 'calc(100vh - 143px)',
+            height: height,
             border: 'none',
             verticalAlign: 'middle',
           }}
@@ -28,5 +33,7 @@ export function Widget(props: WidgetConfig) {
     </DashboardWidgetContainer>
   )
 }
+
+Widget.defaultProps = defaultProps
 
 export default Widget
