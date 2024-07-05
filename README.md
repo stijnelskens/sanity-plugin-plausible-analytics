@@ -32,7 +32,7 @@ export default defineConfig({
     dashboardTool({
       widgets: [
         plausibleWidget({
-          url: '<https://plausible.io/share/your-project?auth=xxxx>',
+          url: 'https://plausible.io/share/your-project?auth=xxxx',
         }),
       ],
     }),
