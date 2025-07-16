@@ -1,6 +1,6 @@
 {
   "name": "sanity-plugin-plausible-analytics",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Access your plausible analytics in sanity studio.",
   "keywords": [
     "sanity",
