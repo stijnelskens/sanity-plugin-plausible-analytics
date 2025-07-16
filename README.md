@@ -1,6 +1,5 @@
 # sanity-plugin-plausible-analytics
 
-> This is a **Sanity Studio v3** plugin.
 > Inspired by https://www.sanity.io/plugins/plausible-iframe for v2.
 
 ![Example image](image.png)
@@ -13,7 +12,7 @@
 ## Installation
 
 ```sh
-npm install sanity-plugin-plausible-analytics
+pnpm install sanity-plugin-plausible-analytics
 ```
 
 ## Usage
