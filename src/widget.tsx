@@ -19,6 +19,8 @@ export function Widget(props: WidgetConfig) {
       <>
         <iframe
           src={`${url}&embed=true&theme=system`}
+          title={title}
+          sandbox="allow-scripts"
           loading="lazy"
           style={{
             width: '100%',

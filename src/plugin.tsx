@@ -1,6 +1,6 @@
 import {DashboardWidget, LayoutConfig} from '@sanity/dashboard'
 
-import Widget, {WidgetConfig} from './widget'
+import {Widget, type WidgetConfig} from './widget'
 
 export interface PlausibleWidgetConfig extends WidgetConfig {
   layout?: LayoutConfig
