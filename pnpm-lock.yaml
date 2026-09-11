@@ -4,6 +4,12 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  js-yaml@<3.15.2: '>=3.15.2'
+  smol-toml@<1.8.0: '>=1.8.0'
+  adm-zip@<0.6.1: '>=0.6.1'
+  uuid@<11.1.1: '>=11.1.1'
+
 importers:
 
   .:
@@ -12,6 +18,9 @@ importers:
         specifier: ^6.0.18
         version: 6.0.18(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(sanity@6.13.2(@babel/core@7.29.7(supports-color@5.5.0))(@babel/runtime@7.29.7)(@noble/hashes@2.4.0)(@rolldown/plugin-babel@0.2.4(@babel/core@7.29.7(supports-color@5.5.0))(@babel/runtime@7.29.7)(rolldown@1.2.8)(vite@8.3.0(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.13)(yaml@2.9.0)))(@sanity/sdk@3.1.0(@types/react@19.3.0)(react@19.3.0)(use-sync-external-store@1.7.0(react@19.3.0))(xstate@5.32.6))(@types/react@19.3.0)(esbuild@0.28.2)(jiti@2.7.0)(oxfmt@0.67.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(rolldown@1.2.8)(styled-components@6.5.3(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(supports-color@5.5.0)(tsx@4.23.13)(typescript@6.0.3))(styled-components@6.5.3(react-dom@19.3.0(react@19.3.0))(react@19.3.0))
     devDependencies:
+      '@sanity/browserslist-config':
+        specifier: ^1.0.5
+        version: 1.0.5
       '@sanity/pkg-utils':
         specifier: ^13.0.0
         version: 13.0.0(@babel/runtime@7.29.7)(rolldown@1.2.8)(supports-color@5.5.0)(typescript@6.0.3)(vite@8.3.0(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.13)(yaml@2.9.0))
@@ -2606,8 +2615,8 @@ packages:
     engines: {node: '>=0.4.0'}
     hasBin: true
 
-  adm-zip@0.6.0:
-    resolution: {integrity: sha512-XleryMhbuksdKtofnWZ9Sk+4CUTbms4Mb/EU32SZwToAyZ5RgVos/ki8n+yr0LWHOGKuakbXTuuYNHLQjhddgg==}
+  adm-zip@0.6.1:
+    resolution: {integrity: sha512-Xwrja8nx9e5o2N1my4DsKCeKpdrnACyr1wtbPxBDgGzKzKyE9kRtBFA8mWldI+RVlD7CBZNWY/wQ2+ydwOR6kQ==}
     engines: {node: '>=14.0'}
 
   agent-base@7.1.4:
@@ -2672,6 +2681,9 @@ packages:
 
   argparse@1.0.10:
     resolution: {integrity: sha512-o5Roy6tNG4SL/FOkCAN6RzjiakZS25RLYFrcMttJqbdd8BWrnA+fGz57iN5Pb06pvBGvl5gQ0B48dJlslXvoTg==}
+
+  argparse@2.0.1:
+    resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
 
   array-timsort@1.0.3:
     resolution: {integrity: sha512-/+3GRL7dDAGEfM6TseQk/U+mi18TU2Ms9I3UlLdUMhz2hbvGNTKdj9xniwXfUqgYhHxRx0+8UnKkvlNwVU+cWQ==}
@@ -3725,8 +3737,8 @@ packages:
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
 
-  js-yaml@3.13.1:
-    resolution: {integrity: sha512-YfbcO7jXDdyj0DGxYVSlSeQNHbD7XPWvrVWeVUujrQEoZzWJIRrCPoyk6kL6IAjAG2IolMK4T0hNUe0HOUs5Jw==}
+  js-yaml@5.4.1:
+    resolution: {integrity: sha512-28R/k+NAjeuf7+CKlTxWZVExJGwVVLwY06DgEnOMz2gEpfNkDcD7QvyiVPT0xy0XXhU8vHsd4Ot42OOPdJG7dQ==}
     hasBin: true
 
   jsdom@28.1.0:
@@ -4651,10 +4663,6 @@ packages:
     resolution: {integrity: sha512-ZA6oR3T/pEyuqwMgAKT0/hAv8oAXckzbkmR0UkUosQ+Mc4RxGoJkRmwHgHufaenlyAgE1Mxgpdcrf75y6XcnDg==}
     engines: {node: '>=14.16'}
 
-  smol-toml@1.5.2:
-    resolution: {integrity: sha512-QlaZEqcAH3/RtNyet1IPIYPsEWAaYyXXv1Krsi+1L/QHppjX4Ifm8MQsBISz9vE8cHicIq3clogsheili5vhaQ==}
-    engines: {node: '>= 18'}
-
   smol-toml@1.8.0:
     resolution: {integrity: sha512-kCZr2V3ch9i00x8zXRhjUNVcjG9ijES5dDudkXvUVCT5QlJNQWElSJdZqyPemffHoLNUYwOcou0Fy+ojN0uHSQ==}
     engines: {node: '>= 18'}
@@ -5035,15 +5043,6 @@ packages:
 
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
-
-  uuid@10.0.0:
-    resolution: {integrity: sha512-8XkAphELsDnEGrDxUOHB3RGvXz6TeuYSGEZBOjtTtPm2lwhGBjLgOzLHB63IUWfBpNucQjND6d3AOudO+H3RWQ==}
-    deprecated: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
-    hasBin: true
-
-  uuid@11.1.1:
-    resolution: {integrity: sha512-vIYxrBCC/N/K+Js3qSN88go7kIfNPssr/hHCesKCQNAjmgvYS2oqr69kIufEG+O4+PfezOH4EbIeHCfFov8ZgQ==}
-    hasBin: true
 
   uuid@14.0.2:
     resolution: {integrity: sha512-xZe/16rV4aa+HGSOCiY2YeLT1OybRLrrkL/Rqaq7p7GMVXjFh+6wN4oMYgjFmnSnhY8t6Xpdl2l9qmnHYuMHwQ==}
@@ -6553,7 +6552,7 @@ snapshots:
       '@module-federation/managers': 2.9.0
       '@module-federation/sdk': 2.9.0
       '@module-federation/third-party-dts-extractor': 2.9.0
-      adm-zip: 0.6.0
+      adm-zip: 0.6.1
       isomorphic-ws: 5.0.0(ws@8.21.0)
       typescript: 6.0.3
       undici: 7.29.0
@@ -7664,7 +7663,7 @@ snapshots:
       '@sanity/cli-build': 5.3.1(@babel/core@7.29.7(supports-color@5.5.0))(@babel/runtime@7.29.7)(@noble/hashes@2.4.0)(@types/react@19.3.0)(esbuild@0.28.2)(jiti@2.7.0)(rolldown@1.2.8)(tsx@4.23.13)(typescript@6.0.3)(yaml@2.9.0)
       '@sanity/cli-core': 3.7.0(@noble/hashes@2.4.0)(esbuild@0.28.2)(tsx@4.23.13)(yaml@2.9.0)
       '@sanity/client': 8.6.1
-      adm-zip: 0.6.0
+      adm-zip: 0.6.1
       array-treeify: 0.2.0
       cardinal: 2.1.1
       empathic: 2.0.1
@@ -7871,7 +7870,7 @@ snapshots:
 
   '@sanity/uuid@3.0.3':
     dependencies:
-      uuid: 11.1.1
+      uuid: 14.0.2
 
   '@sanity/validation@6.13.2(@types/react@19.3.0)(typescript@6.0.3)':
     dependencies:
@@ -8144,8 +8143,8 @@ snapshots:
   '@vercel/frameworks@3.29.0':
     dependencies:
       '@vercel/error-utils': 2.2.0
-      js-yaml: 3.13.1
-      smol-toml: 1.5.2
+      js-yaml: 5.4.1
+      smol-toml: 1.8.0
 
   '@vercel/stega@1.1.0': {}
 
@@ -8246,7 +8245,7 @@ snapshots:
 
   acorn@8.18.0: {}
 
-  adm-zip@0.6.0: {}
+  adm-zip@0.6.1: {}
 
   agent-base@7.1.4: {}
 
@@ -8302,6 +8301,8 @@ snapshots:
   argparse@1.0.10:
     dependencies:
       sprintf-js: 1.0.3
+
+  argparse@2.0.1: {}
 
   array-timsort@1.0.3: {}
 
@@ -9292,10 +9293,9 @@ snapshots:
 
   js-tokens@4.0.0: {}
 
-  js-yaml@3.13.1:
+  js-yaml@5.4.1:
     dependencies:
-      argparse: 1.0.10
-      esprima: 4.0.1
+      argparse: 2.0.1
 
   jsdom@28.1.0(@noble/hashes@2.4.0)(supports-color@5.5.0):
     dependencies:
@@ -10310,8 +10310,6 @@ snapshots:
 
   slash@5.1.0: {}
 
-  smol-toml@1.5.2: {}
-
   smol-toml@1.8.0: {}
 
   source-map-js@1.2.1: {}
@@ -10558,7 +10556,7 @@ snapshots:
 
   typeid-js@1.2.0:
     dependencies:
-      uuid: 10.0.0
+      uuid: 14.0.2
 
   typescript@5.9.3: {}
 
@@ -10659,10 +10657,6 @@ snapshots:
       os-homedir: 1.0.2
 
   util-deprecate@1.0.2: {}
-
-  uuid@10.0.0: {}
-
-  uuid@11.1.1: {}
 
   uuid@14.0.2: {}
 

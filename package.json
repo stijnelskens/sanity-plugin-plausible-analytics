@@ -44,6 +44,7 @@
     "@sanity/dashboard": "^6.0.18"
   },
   "devDependencies": {
+    "@sanity/browserslist-config": "^1.0.5",
     "@sanity/pkg-utils": "^13.0.0",
     "@sanity/plugin-kit": "^10.0.9",
     "@types/react": "^19.3.0",
@@ -60,6 +61,7 @@
     "react": "^19.2",
     "sanity": "^5 || ^6.0.0-0"
   },
+  "browserslist": "extends @sanity/browserslist-config",
   "engines": {
     "node": ">=20.19 <22 || >=22.12"
   }
