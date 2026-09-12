@@ -1,5 +1,7 @@
 # sanity-plugin-plausible-analytics
 
+[![npm version](https://img.shields.io/npm/v/sanity-plugin-plausible-analytics.svg)](https://www.npmjs.com/package/sanity-plugin-plausible-analytics)
+
 > Inspired by https://www.sanity.io/plugins/plausible-iframe for v2.
 
 ![Example image](image.png)
