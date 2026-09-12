@@ -1,19 +1,17 @@
-import { DashboardWidget, LayoutConfig } from "@sanity/dashboard";
+import {DashboardWidget, LayoutConfig} from '@sanity/dashboard'
 
-import { Widget, type WidgetConfig } from "./widget";
+import {Widget, type WidgetConfig} from './widget'
 
 export interface PlausibleWidgetConfig extends WidgetConfig {
-  layout?: LayoutConfig;
+  layout?: LayoutConfig
 }
 
-export function plausibleWidget(
-  config: PlausibleWidgetConfig,
-): DashboardWidget {
+export function plausibleWidget(config: PlausibleWidgetConfig): DashboardWidget {
   return {
-    name: "sanity-plugin-plausible-analytics",
+    name: 'sanity-plugin-plausible-analytics',
     component: function component() {
-      return <Widget {...config} />;
+      return <Widget {...config} />
     },
-    layout: config.layout ?? { width: "full" },
-  };
+    layout: config.layout ?? {width: 'full'},
+  }
 }

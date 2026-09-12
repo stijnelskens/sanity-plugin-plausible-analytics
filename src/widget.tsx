@@ -17,9 +17,10 @@ export function Widget(props: WidgetConfig) {
     <DashboardWidgetContainer header={title}>
       <>
         <iframe
-          plausible-embed
+          plausible-embed="true"
           src={`${url}&embed=true&theme=system`}
           title={title}
+          loading="lazy"
           style={{
             width: "100%",
             minWidth: "calc(100% - 1px)",
