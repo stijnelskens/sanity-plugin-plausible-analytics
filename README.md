@@ -4,6 +4,15 @@
 
 ![Example image](image.png)
 
+## Compatibility
+
+| `sanity-plugin-plausible-analytics` | Sanity               | React          |
+| ----------------------------------- | -------------------- | -------------- |
+| `^2.0.0`                            | `^5.0.0 \|\| ^6.0.0` | `^19.2`        |
+| `^1.0.0`                            | `^3.0.0 \|\| ^4.0.0` | `^18 \|\| ^19` |
+
+See the [changelog](CHANGELOG.md) for details on what changed in 2.0.0.
+
 ## Plausible configuration
 
 - Create a shared link without password protection.
